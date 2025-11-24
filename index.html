@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDevLog Typing Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">AIDevLog Typing</div>
+            <nav>
+                <a href="#" class="nav-link active">Practice</a>
+                <a href="games.html" class="nav-link">Games</a>
+                <button id="upload-btn" class="nav-link"
+                    style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:inherit;">Upload
+                    Text</button>
+                <input type="file" id="file-upload" accept="text/*" class="hidden-input">
+            </nav>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="time">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Speed</span>
+                    <span class="stat-value" id="wpm">0 WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-value" id="accuracy">100%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value" id="progress">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="typing-area">
+            <div class="text-display" id="text-display">
+                <!-- Text will be injected here -->
+            </div>
+            <input type="text" id="input-field" class="hidden-input" autocomplete="off" spellcheck="false">
+        </main>
+
+        <div class="keyboard-container">
+            <div class="keyboard" id="keyboard">
+                <!-- Keyboard keys will be generated or hardcoded here -->
+                <div class="row">
+                    <div class="key" data-key="`">`</div>
+                    <div class="key" data-key="1">1</div>
+                    <div class="key" data-key="2">2</div>
+                    <div class="key" data-key="3">3</div>
+                    <div class="key" data-key="4">4</div>
+                    <div class="key" data-key="5">5</div>
+                    <div class="key" data-key="6">6</div>
+                    <div class="key" data-key="7">7</div>
+                    <div class="key" data-key="8">8</div>
+                    <div class="key" data-key="9">9</div>
+                    <div class="key" data-key="0">0</div>
+                    <div class="key" data-key="-">-</div>
+                    <div class="key" data-key="=">=</div>
+                    <div class="key backspace" data-key="Backspace">Backspace</div>
+                </div>
+                <div class="row">
+                    <div class="key tab" data-key="Tab">Tab</div>
+                    <div class="key" data-key="q">Q</div>
+                    <div class="key" data-key="w">W</div>
+                    <div class="key" data-key="e">E</div>
+                    <div class="key" data-key="r">R</div>
+                    <div class="key" data-key="t">T</div>
+                    <div class="key" data-key="y">Y</div>
+                    <div class="key" data-key="u">U</div>
+                    <div class="key" data-key="i">I</div>
+                    <div class="key" data-key="o">O</div>
+                    <div class="key" data-key="p">P</div>
+                    <div class="key" data-key="[">[</div>
+                    <div class="key" data-key="]">]</div>
+                    <div class="key backslash" data-key="\">\\</div>
+                </div>
+                <div class="row">
+                    <div class="key caps" data-key="CapsLock">Caps</div>
+                    <div class="key" data-key="a">A</div>
+                    <div class="key" data-key="s">S</div>
+                    <div class="key" data-key="d">D</div>
+                    <div class="key" data-key="f">F</div>
+                    <div class="key" data-key="g">G</div>
+                    <div class="key" data-key="h">H</div>
+                    <div class="key" data-key="j">J</div>
+                    <div class="key" data-key="k">K</div>
+                    <div class="key" data-key="l">L</div>
+                    <div class="key" data-key=";">;</div>
+                    <div class="key" data-key="'">'</div>
+                    <div class="key enter" data-key="Enter">Enter</div>
+                </div>
+                <div class="row">
+                    <div class="key shift" data-key="ShiftLeft">Shift</div>
+                    <div class="key" data-key="z">Z</div>
+                    <div class="key" data-key="x">X</div>
+                    <div class="key" data-key="c">C</div>
+                    <div class="key" data-key="v">V</div>
+                    <div class="key" data-key="b">B</div>
+                    <div class="key" data-key="n">N</div>
+                    <div class="key" data-key="m">M</div>
+                    <div class="key" data-key=",">,</div>
+                    <div class="key" data-key=".">.</div>
+                    <div class="key" data-key="/">/</div>
+                    <div class="key shift" data-key="ShiftRight">Shift</div>
+                </div>
+                <div class="row">
+                    <div class="key space" data-key=" ">Space</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

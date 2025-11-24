@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDevLog Typing Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container game-mode">
+        <header class="app-header">
+            <div class="logo">AIDevLog Games</div>
+            <nav>
+                <a href="index.html" class="nav-link">Practice</a>
+                <a href="#" class="nav-link active">Games</a>
+            </nav>
+        </header>
+
+        <main class="game-area">
+            <!-- Game Selection Menu -->
+            <div id="game-menu" class="game-menu">
+                <h2>Select a Game</h2>
+                <div class="game-grid">
+                    <div class="game-card" onclick="startGame('space-war')">
+                        <div class="game-icon">🚀</div>
+                        <h3>Space War</h3>
+                        <p>Type words to destroy incoming ships!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('mole-hunt')">
+                        <div class="game-icon">🐹</div>
+                        <h3>Mole Hunt</h3>
+                        <p>Hit the moles by typing their letters!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('police-thief')">
+                        <div class="game-icon">🚓</div>
+                        <h3>Police vs Thief</h3>
+                        <p>Type fast to catch the thief!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('apple-catch')">
+                        <div class="game-icon">🍎</div>
+                        <h3>Apple Catching</h3>
+                        <p>Catch falling apples before they rot!</p>
+                    </div>
+                    <div class="game-card" onclick="startGame('frog-cross')">
+                        <div class="game-icon">🐸</div>
+                        <h3>Frog Crossing</h3>
+                        <p>Jump across the river by typing words!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Container -->
+            <div id="game-container" class="game-container hidden">
+                <div class="game-header">
+                    <h3 id="current-game-title">Game Title</h3>
+                    <div class="game-stats">
+                        <span id="game-score">Score: 0</span>
+                        <span id="game-level">Level: 1</span>
+                        <span id="game-lives">Lives: 3</span>
+                    </div>
+                    <button class="btn-secondary" onclick="exitGame()">Exit Game</button>
+                </div>
+                <canvas id="game-canvas" width="800" height="500"></canvas>
+                <div id="game-overlay" class="hidden">
+                    <h2 id="overlay-title">Game Over</h2>
+                    <p id="overlay-message">Final Score: 100</p>
+                    <button class="btn-primary" onclick="restartGame()">Play Again</button>
+                    <button class="btn-secondary" onclick="exitGame()">Menu</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="games.js"></script>
+</body>
+
+</html>
